@@ -1,10 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
-  namespace: showroom-team1
+  name: httpd
   labels:
-    deployment: nginx
+    deployment: httpd
   ipFamilies:
     - IPv4
   ports:
@@ -16,5 +15,5 @@ metadata:
   type: ClusterIP
   sessionAffinity: None
   selector:
-    deployment: nginx
+    deployment: httpd
 

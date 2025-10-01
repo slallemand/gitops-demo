@@ -1,23 +1,23 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: nginx
+  name: httpd
   labels:
-    app: nginx
-    app.openshift.io/runtime: nginx
+    app: httpd
+    app.openshift.io/runtime: httpd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      deployment: nginx
+      deployment: httpd
   template:
     metadata:
       labels:
-        deployment: nginx
+        deployment: httpd
     spec:
       containers:
-        - name: nginx
-          image: 'registry.access.redhat.com/ubi9/nginx-126:latest'
+        - name: httpd
+          image: 'registry.redhat.io/ubi9/httpd-24:latest'
           ports:
             - containerPort: 8080
               protocol: TCP

@@ -1,14 +1,14 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: nginx
+  name: httpd
   labels:
-    app: nginx
+    app: httpd
 spec:
-  host: nginx
+  host: httpd
   to:
     kind: Service
-    name: nginx
+    name: httpd
     weight: 100
   port:
     targetPort: 8080
