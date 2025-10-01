@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpd2
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: axway-demo2
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+#    helm:
+#      parameters:
+#        - name: replicaCount
+#          value: '3'
+    path: demox
+    repoURL: 'https://github.com/slallemand/gitops-demo.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      enabled: true
+    syncOptions:
+      - CreateNamespace=true
