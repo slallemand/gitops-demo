@@ -5,7 +5,6 @@ metadata:
   labels:
     app: httpd
 spec:
-  host: httpd
   to:
     kind: Service
     name: httpd
