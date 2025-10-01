@@ -4,6 +4,7 @@ metadata:
   name: httpd
   labels:
     deployment: httpd
+spec:
   ipFamilies:
     - IPv4
   ports:
