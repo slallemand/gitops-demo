@@ -5,13 +5,13 @@ metadata:
   labels:
     app: httpd
 spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
   to:
     kind: Service
     name: httpd
     weight: 100
-  port:
-    targetPort: 8080
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
