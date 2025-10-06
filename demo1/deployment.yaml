@@ -6,7 +6,8 @@ metadata:
     app: httpd
     app.openshift.io/runtime: httpd
 spec:
-  replicas: 2
+ replicas: 2
+
   selector:
     matchLabels:
       deployment: httpd
