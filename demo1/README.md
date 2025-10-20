@@ -3,13 +3,13 @@ HTTPD deployement using pure kubernetes manifests in git
 - console gitops 
 - application creation
 	- New App
-	- axway-demo1
+	- whatever-demo1
 	- default
 	- Auto-Create Namespace
 	- https://github.com/slallemand/gitops-demo.git
 	- Path : demo1
 	- https://kubernetes.default.svc
-	- ns : axway-demo1
+	- ns : whatever-demo1
 
 Replicas modification in OCP console then in git
 
