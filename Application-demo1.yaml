@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: axway-demo1
+  name: whatever-demo1
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: axway-demo1
+    namespace: whatever-demo1
     server: 'https://kubernetes.default.svc'
   project: default
   source:
